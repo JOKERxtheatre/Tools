@@ -17,11 +17,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--foreground-end-rgb))
     )
     rgb(var(--background-start-rgb));
 }
@@ -30,4 +30,38 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.input[type="checkbox"] {
+  display: none;
+}
+
+/* Style for the custom checkbox */
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style for the custom checkmark */
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* Show the checkmark when checkbox is checked */
+.input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1;
 }
