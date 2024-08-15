@@ -50,7 +50,7 @@ export default function Home() {
       {/* Background Animation */}
       <BackgroundAnimation />
 
-      <div className="container max-w-[1140px] flex flex-col justify-center text-center gap-5 z-10">
+      <div className="container max-w-[1140px] flex flex-col justify-center text-center gap-5 z-10 mt-12">
         <h1 className="text-6xl font-bold text-[#1b5bf7]">Tools</h1>
         <div className="categories grid grid-flow-row grid-cols-7 max-[768px]:grid-cols-4 max-[768px]:px-4 max-[426px]:grid-cols-2 gap-5 items-center justify-between">
           {categories.map((category) => (
